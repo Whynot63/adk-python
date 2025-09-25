@@ -223,7 +223,7 @@ class LlmAgent(BaseAgent):
   """Disallows LLM-controlled transferring to the peer agents."""
 
   require_confirmation_for_transfer: bool = False
-  """Should LLM ask confirmation for transfer from user"""
+  """If True, requires user confirmation before transferring to another agent."""
   # LLM-based agent transfer configs - End
 
   include_contents: Literal['default', 'none'] = 'default'
