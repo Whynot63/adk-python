@@ -57,8 +57,8 @@ class _AgentTransferLlmRequestProcessor(BaseLlmRequestProcessor):
     ])
 
     transfer_to_agent_tool = FunctionTool(
-      func=transfer_to_agent,
-      require_confirmation=invocation_context.agent.require_confirmation_for_transfer
+        func=transfer_to_agent,
+        require_confirmation=invocation_context.agent.require_confirmation_for_transfer
     )
     tool_context = ToolContext(invocation_context)
     await transfer_to_agent_tool.process_llm_request(
